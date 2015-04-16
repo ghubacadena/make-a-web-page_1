@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes Display</title>
+    <link rel="stylesheet" type="text/css" href="Estilo-Visor.css">
+    <script type="text/javascript" src="Scrp-Visor.js"></script>
+</head>
+
+<body>
+    <!--Las divisiones marcan la estructura del Visor de Notas-->
+    <div class="container">
+        <div class="Top">
+            <div class="Uda">
+                <img src="Image/Udacity.png" alt="Udacity" width="90" height="80">
+            </div>
+            <div class="Block"></div>
+            <div class="Cab"><h1>Nanodegree</h1>
+                <h1>Introduction to Programming</h1>
+            </div>
+            <div class="Block"></div>
+            <div class ="Pen">
+                <img src="Image/Pincel.jpg" alt="Brush" width="80" height="80">
+            </div>
+        </div>
+
+        <div>
+            <!--Menu Principal para acceso a Notas de las Lecciones-->
+            <ul class="menu">
+                <li class="menuitem" onclick="LoadLesson(1)">Lesson #1</li>
+                <li class="menuitem" onclick="LoadLesson(2)">Lesson #2</li>
+                <li class="menuitem" onclick="LoadLesson(3)">Lesson #3</li>             
+            </ul>
+        </div>
+        <!--Seccion del Visor de Notas-->
+        <div class="Wrapper">
+            <div class="Lec">
+                <!--Menu para seleccion de Notas por Leccion-->
+                <ul class="mLec">
+                    <li class="mLitem" id="mL1" onclick="NoteL1()"></li>
+                    <li class="mLitem" id="mL2" onclick="NoteL2()"></li>
+                    <li class="mLitem" id="mL3" onclick="NoteL3()"></li>
+                    <li class="mLitem" id="mL4" onclick="NoteL4()"></li>
+                    <li class="mLitem" id="mL5" onclick="NoteL5()"></li>
+                    <li class="mLitem" id="mL6" onclick="NoteL6()"></li>
+                    <li class="mLitem" id="mL7" onclick="NoteL7()"></li>
+                    <li class="mLitem" id="mL8" onclick="NoteL8()"></li>
+                    <li class="mLitem" id="mL9" onclick="NoteL9()"></li>
+                </ul>
+            </div>
+            <!--Visor de Notas de Texto-->
+            <div class="Visor">
+                <h3 id="Tit">NOTES - VISOR version 0.1</h3>
+                <p class="Lna" id="Ln01">To see the lesson's notes click on the Lesson tab</p>
+                <p class="Lna" id="Ln02">Once the lesson's notes have been loaded click on the menu items</p>
+                <p class="Lna" id="Ln03">Also, check the videos of the lesson at the right's visor</p>
+                <p class="Lna" id="Ln04"></p>
+                <p class="Lna" id="Ln05">For more information you can click on the reference Links below</p>
+                <p class="Lna" id="Ln06"></p>
+                <p class="Lna" id="Ln07"></p>
+                <p class="Lna" id="Ln08"></p>
+                <p class="Lna" id="Ln09"></p>
+            </div>
+            <div class="Video">
+            <!--   <video id="v0" width="420" height="290" controls> -->
+               <!--
+                <video id="v1" width="425" height="320" controls>
+                    <source src="/Video/Lesson1/06 - Components of the Web.mp4" type="video/mp4">
+                </video>
+                <video id="v2" width="425" height="320" controls>
+                    <source src="/Video/Lesson2/04 - The First Step.mp4" type="video/mp4">
+                </video>
+                <video id="v3" width="425" height="320" controls>
+                    <source src="/Video/Lesson2/07 - Page Structure.mp4" type="video/mp4">
+                </video>
+                <video id="v4" width="425" height="320" controls>
+                    <source src="/Video/Lesson2/11 - HTML-CSS-DOM.mp4" type="video/mp4">
+                </video>
+                <video id="v5" width="425" height="320" controls>
+                    <source src="/Video/Lesson3/04 - Understanding CSS.mp4" type="video/mp4">
+                </video>
+                <video id="v6" width="425" height="320" controls>
+                    <source src="/Video/Lesson3/05 - Styling Up.mp4" type="video/mp4">
+                </video>
+                <video id="v7" width="425" height="320" controls>
+                    <source src="/Video/Lesson3/09 - The Box Revisited.mp4" type="video/mp4">
+                </video>
+                -->
+            <!--<div class="vidbott">xxxxxxxxxx</div>-->
+            <p class="Lna" id="vidname"></p>
+        </div>
+        <!--En la parte baja del visor se encuentran todas las ligas externas para referencias de las notas o para obtener mas informacion-->
+        <div class="bott">
+            <ul class="mRef">
+                <li class="mRitem"><a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets"><img src="Image/Wiki.png" alt="Wiki" width="80" height="85"></a></li>
+                <li class="mRitem"><a href="http://validator.w3.org/"><img src="Image/w3c.png" alt="W3C" width="80" height="85"></a></li>
+                <li class="mRitem"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"><img src="Image/Mozilla.png" alt="mozilla" width="80" height="85"></a></li>
+                <li class="mRitem"><a href="http://www.w3schools.com/html/default.asp"><img src="Image/w3html.png" alt="W3html" width="80" height="85"></a></li>
+                <li class="mRitem"><a href="http://www.w3schools.com/css/default.asp"><img src="Image/w3css.png" alt="W3CSS" width="80" height="85"></a></li>
+                <li class="mRitem"><a href="http://www.w3schools.com/js/default.asp"><img src="Image/w3java.png" alt="W3Java" width="80" height="85"></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Los siguientes parrafos no deben ser visibles. Estos son las notas a mostrarse en el Visor-->
+    <!--NOTAS DE LAS LECCIONES-->
+    <p class="Nota" id="N1L1L1">WWW: It has also commonly become known simply as the <b>Web</b> and is an information system of interlinked hypertext documents that are accessed via the Internet.</p>
+    <p class="Nota" id="N1L2L1">HTTP: Short for HyperText Transfer Protocol. Is the underlying protocol used by the <b>Web</b> and defines how messages, between <b>Servers</b> and <b>browsers</b>, are formatted and transmitted.</p>
+    <p class="Nota" id="N1L3L1">HTLM: Short for HyperText Markup Language. A markup language is a set of markup tags, so <b>HTML</b> is a language for describing web documents (web pages) where those are described by HTML tags.</p>
+    <p class="Nota" id="N1L4L1">Browser: The purpose of a browser is to read HTML documents and display them. Be aware that the browser does not display the HTML tags, but uses them to determine how to display the document.</p>
+    <p class="Nota" id="N1L5L1"></p>
+    <p class="Nota" id="N1L6L1"></p>
+    <p class="Nota" id="N1L7L1"></p>
+    <p class="Nota" id="N1L8L1"></p>
+    <p class="Nota" id="N1L9L1"></p>
+
+    <p class="Nota" id="N2L1L1">Even though it seems pure magic, what is really behind is just a formal procedure to establish a straightforward communication between your computer and a web server. As in the ancient times when an embassador went to another kingdom to meet the king, an elaborate protocol where established to keep the relations between both nations in proper manner. Something similar happens when you try to access a web page throughout the internet. A specific <abbr title="The protocol used is HTTP"><b>protocol</b></abbr> is followed by the computers to get and fetch the page that you are requesting.</p>
+    <p class="Nota" id="N2L2L1">The actors, by order of appearance are: the <abbr title="The User is You and the browser"><b>User</b></abbr>, the <b>Internet</b> and the <b>web Servers.</b></p>
+    <p class="Nota" id="N2L3L1"></p>
+    <p class="Nota" id="N2L4L1"></p>
+    <p class="Nota" id="N2L5L1"></p>
+    <p class="Nota" id="N2L6L1"></p>
+    <p class="Nota" id="N2L7L1"></p>
+    <p class="Nota" id="N2L8L1"></p>
+    <p class="Nota" id="N2L9L1"></p>
+
+    <p class="Nota" id="N3L1L1">The story starts when you, after some time of hard work finally get a chance for an interview for your ideal job. The interview will be in your home and you are planning a formal dinner to close the deal but you forgot that you need to finish a report for your boss and don't have much time to set everything for the dinner to make the good impression you want, so now you has to figure it out how resolve the mess.</p>
+    <p class="Nota" id="N3L2L1">Almost at the point you're in panic, remember that your <b>bro</b> (dont be confuse, not your brother, your browser), is available and he can help you setting the table for you. But there is a little problem, he doesn't know much about politeness and you can't afford the minimum error, everything has to be perfect!</p>
+    <p class="Nota" id="N3L3L1"></p>
+    <p class="Nota" id="N3L4L1"></p>
+    <p class="Nota" id="N3L5L1"></p>
+    <p class="Nota" id="N3L6L1"></p>
+    <p class="Nota" id="N3L7L1"></p>
+    <p class="Nota" id="N3L8L1"></p>
+    <p class="Nota" id="N3L9L1"></p>
+
+    <p class="Nota" id="N4L1L1">First, you thought write a precisely instruction manual for your <b>bro</b> but you remember he is not a good reader too - at this point you are thinking your bro is stupid - the only thing he is good enough is solving puzzle. There is when you got the idea about HTML (Help me with This Mess pLease).</p>
+    <p class="Nota" id="N4L2L1">A simple way to tell your <b>bro</b> what he has to do to set the table. Using small pieces of information, such as tags, to name everything you needs on the table, for example you use &lt;c&gt; for candle, &lt;w&gt; for wine, &lt;f&gt; for fork, etc.</p>
+    <p class="Nota" id="N4L3L1"></p>
+    <p class="Nota" id="N4L4L1"></p>
+    <p class="Nota" id="N4L5L1"></p>
+    <p class="Nota" id="N4L6L1"></p>
+    <p class="Nota" id="N4L7L1"></p>
+    <p class="Nota" id="N4L8L1"></p>
+    <p class="Nota" id="N4L9L1"></p>
+
+    <p class="Nota" id="N5L1L1">To avoid creates a bunch of tags, one for red wine or white candle, you use attributes to specify that kind of information, for example &lt;t type='round'&gt; for round table. At the end you has already created a nice and smooth system to tell your bro how he has to set the table, moreover you realize that the system can be used to set any kind of table for any kind of dinner.</p>
+    <p class="Nota" id="N5L2L1">By the way, when you arrive everything is done, the interview was perfect and got the job. But when you thought to share with the world about your nice system, you realize that someone else has already created HTML and use a showy name for that, "HyperText Markup Language" ....Ha!</p>
+    <p class="Nota" id="N5L3L1"></p>
+    <p class="Nota" id="N5L4L1"></p>
+    <p class="Nota" id="N5L5L1"></p>
+    <p class="Nota" id="N5L6L1"></p>
+    <p class="Nota" id="N5L7L1"></p>
+    <p class="Nota" id="N5L8L1"></p>
+    <p class="Nota" id="N5L9L1"></p>
+
+    <p class="Nota" id="N6L1L1"></p>
+    <p class="Nota" id="N6L2L1"></p>
+    <p class="Nota" id="N6L3L1"></p>
+    <p class="Nota" id="N6L4L1"></p>
+    <p class="Nota" id="N6L5L1"></p>
+    <p class="Nota" id="N6L6L1"></p>
+    <p class="Nota" id="N6L7L1"></p>
+    <p class="Nota" id="N6L8L1"></p>
+    <p class="Nota" id="N6L9L1"></p>
+
+    <p class="Nota" id="N1L1L2">Three kind of files conforms to a Web Document: HTML, CSS and Job Descriptors.</p>
+    <p class="Nota" id="N1L2L2">HTML is the structure of the document, something similar to the rooms in a house.</p>
+    <p class="Nota" id="N1L3L2">CSS is the style of the document, such as the furniture or the color of the walls in the house.</p>
+    <p class="Nota" id="N1L4L2">Job Descritors are the interacting components in the document, such as the remote control for TV or open the garage.</p>
+    <p class="Nota" id="N1L5L2"></p>
+    <p class="Nota" id="N1L6L2"></p>
+    <p class="Nota" id="N1L7L2"></p>
+    <p class="Nota" id="N1L8L2"></p>
+    <p class="Nota" id="N1L9L2"></p>
+
+    <p class="Nota" id="N2L1L2">HTML documents are described by HTML tags which describe different document content. HTML tags are keywords surrounded by angle brackets. Normally the Tags come in pairs like &lt;p&gt; and &lt;/p&gt;, where the first tag in a pair is the start tag (<b>often called the opening tag</b>), the second tag is the end tag (<b>often called the closing tag</b>). The purpose of the end tag is <i>"Close"</i> the content between both tags and tells the browser where the format of the content ends. The end tag is written like the start tag, but with a slash before the tag name.</p>
+    <p class="Nota" id="N2L2L2">The HTML element is everything from the start tag to the end tag, namely are written with a start tag, with an end tag, with the content in between: &lt;tagname&gt;content&lt;/tagname&gt;. Attributes provide additional information about HTML elements and are always specified in the start tag throughtout name/value pairs like: <strong>name="value"</strong>.</p>
+    <p class="Nota" id="N2L3L2"></p>
+    <p class="Nota" id="N2L4L2"></p>
+    <p class="Nota" id="N2L5L2"></p>
+    <p class="Nota" id="N2L6L2"></p>
+    <p class="Nota" id="N2L7L2"></p>
+    <p class="Nota" id="N2L8L2"></p>
+    <p class="Nota" id="N2L9L2"></p>
+
+    <p class="Nota" id="N3L1L2">The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document. The HTML DOM defines the objects and properties of all document elements, and the methods (interface) to access them.</p>
+    <p class="Nota" id="N3L2L2">The DOM views an HTML document as a tree-structure. All nodes can be accessed through the tree. Their contents can be modified or deleted, and new elements can be created. The node tree shows the set of nodes, and the connections between them. The tree starts at the root node and branches out to the text nodes at the lowest level of the tree.</p>
+    <p class="Nota" id="N3L3L2"></p>
+    <p class="Nota" id="N3L4L2"></p>
+    <p class="Nota" id="N3L5L2"></p>
+    <p class="Nota" id="N3L6L2"></p>
+    <p class="Nota" id="N3L7L2"></p>
+    <p class="Nota" id="N3L8L2"></p>
+    <p class="Nota" id="N3L9L2"></p>
+
+    <p class="Nota" id="N1L1L3">CSS stands for <b>Cascading Style Sheets</b> and defines how HTML elements are to be displayed.</p>
+    <p class="Nota" id="N1L2L3">CSS solves a big problem due to HTML was NEVER intended to contain tags for formatting a document. HTML was intended to define the content of a document.</p>
+    <p class="Nota" id="N1L3L3">When tags like &lt;font&gt;, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large web sites, where fonts and color information were added to every single page, became a long and expensive process. To solve this problem, the World Wide Web Consortium (W3C) created CSS.</p>
+    <p class="Nota" id="N1L4L3"></p>
+    <p class="Nota" id="N1L5L3"></p>
+    <p class="Nota" id="N1L6L3"></p>
+    <p class="Nota" id="N1L7L3"></p>
+    <p class="Nota" id="N1L8L3"></p>
+    <p class="Nota" id="N1L9L3"></p>
+
+    <p class="Nota" id="N2L1L3">CSS selectors allow you to select and manipulate HTML elements. CSS selectors are used to "find" (or select) HTML elements based on their id, class, type, attribute, and more. The three most used kind of CSS selectors are 1) element selectors, 2) id selectors and 3) class selectors.</p>
+    <p class="Nota" id="N2L2L3">The element selector selects elements based on the element name. You can select all &lt;p&gt;, elements on a page.</p>
+    <p class="Nota" id="N2L3L3">The id selector uses the id attribute of an HTML element to select a specific element. To select an element with a specific id, write a hash character, followed by the id of the element.</p>
+    <p class="Nota" id="N2L4L3">The class selector selects elements with a specific class attribute. To select elements with a specific class, write a period character, followed by the name of the class.</p>
+    <p class="Nota" id="N2L5L3"></p>
+    <p class="Nota" id="N2L6L3"></p>
+    <p class="Nota" id="N2L7L3"></p>
+    <p class="Nota" id="N2L8L3"></p>
+    <p class="Nota" id="N2L9L3"></p>
+
+    <p class="Nota" id="N3L1L3">All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.</p>
+    <p class="Nota" id="N3L2L3">The CSS box model is essentially a box that wraps around HTML elements, and it consists of: margins, borders, padding, and the actual content. The box model allows us to add a border around elements, and to define space between elements.</p>
+    <p class="Nota" id="N3L3L3"> The Box Model is composed of:</p>
+    <p class="Nota" id="N3L4L3"><b>Content</b> - The content of the box, where text and images appear. <b>Padding</b> - Clears an area around the content. The padding is transparent. <b>Border</b> - A border that goes around the padding and content. <b>Margin</b> - Clears an area outside the border. The margin is transparent.</p>
+    <p class="Nota" id="N3L5L3"></p>
+    <p class="Nota" id="N3L6L3"></p>
+    <p class="Nota" id="N3L7L3"></p>
+    <p class="Nota" id="N3L8L3"></p>
+    <p class="Nota" id="N3L9L3"></p>
+   </div>
+</body>
+
+</html>
