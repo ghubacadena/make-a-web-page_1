@@ -1,0 +1,223 @@
+/* Estilo Visor de Notas */
+/*
+*{
+	outline: 1px solid red !important;
+}*/
+
+*{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	max-width: 1323px;
+    font: 100% Tahoma;
+    background-color: #000000
+}
+
+.container {
+	max-width: 1323px;
+}
+
+.Top {
+	display: flex;
+	background-color: black;
+	padding-left: 25px;
+	padding-right: 20px;
+	border-radius: 6px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.Block {
+	float: left;
+    width: 190px;
+    height: 80px;
+    text-align: center;
+}
+
+.Uda {
+	float: left;
+    width: 100px;
+    height: 81px;
+    text-align: center;
+}
+
+.Cab {
+	float: left;
+    width: 1100px;
+	text-align: center;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	padding: 0px 100px 0px;
+	border: 1px;
+	margin: 0px;
+}
+
+.Pen {
+	float: left;
+    width: 100px;
+    height: 80px;
+    text-align: center;
+}
+
+.menu{
+	/*position: relative;*/
+	font-family: Tahoma;
+	overflow: auto;
+	padding-left: 360px;
+	padding-right: 300px;
+	margin: 1px;
+}
+
+.menuitem {
+	float: left;
+	text-align: center;
+	vertical-align: center;
+    width: 200px;
+    height: 30px; 
+    background-color: #0000FF;
+    color: white;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+	border-radius: 5px;
+    margin: 5px;
+    list-style-type: none;	
+}
+
+.Wrapper {
+	position: relative;
+	top: 10px;
+	left: 0px;
+	width: 1322px;
+	height: 352px;
+	padding: 1px;
+	/*border-radius: 5px;
+	border: 1px solid white;*/
+	margin: 0px;
+	/*overflow: auto;*/
+}
+
+.Lec {
+	float: left;
+	width: 200px;
+	height: 350px;
+	padding: 1px;
+	border-radius: 5px;
+	border: 1px solid #FFFFFF;
+	margin: 0px;
+}
+
+.mLec {
+	position: relative;
+	top: 10px;
+	left: -30px;
+}
+
+.mLitem {
+	text-align: center;
+    width: 170px;
+    height: 30px; 
+    background-color: #0000FF;
+    color: white;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+	border-radius: 5px;
+    margin: 5px;
+    list-style-type: none;	
+    display: none;
+}
+
+.Visor {
+	float: left;
+	width: 650px;
+	height: 350px;
+	padding: 5px 10px 5px;
+	border-radius: 5px;
+	border: 1px solid #FFFFFF;
+	margin-left: 10px;
+}
+
+h3 {
+	color: #84C754;
+	font-family: Courier New;
+	text-align: center;
+	padding: 5px;
+	border: 1px;
+	margin: 1px;
+}
+
+.Lna {
+	color: #84C754;
+	font-family: Courier New;
+	max-width: 800px;
+}
+
+.Video {
+	float: left;
+	width: 450px;
+	height: 350px;
+	padding: 5px 10px 5px;
+	border-radius: 5px;
+	border: 1px solid #FFFFFF;
+	margin-left: 10px;
+}
+
+#v1, #v2, #v3, #v4, #v5, #v6, #v7 {
+	display: none;
+}
+
+.vidbott {
+	float: left;
+	text-align: center;
+    width: 300px;
+    height: 30px; 
+    background-color: #0000FF;
+    color: white;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+	border-radius: 5px;
+    margin: 5px;
+    list-style-type: none;	
+ 
+}
+
+.bott {
+	position: absolute;
+	top: 365px;
+	width: 1321px;
+	height: 100px;
+	padding: 5px 10px 5px;
+	border-radius: 5px;
+	border: 1px solid #FFFFFF;
+	margin: 0px;
+}
+
+.mRef {
+	position: relative;
+	top: -15px;
+	left: 125px;
+	list-style-type: none;
+}
+
+.mRitem {
+	float: left;
+	width: 85px;
+	height: 85px;
+	padding: 0px;
+	margin-left: 30px;
+	border-radius: 10px;
+	text-align: center;
+	background-color: #000000;	
+}
+
+.Nota {
+	display: none;
+}
